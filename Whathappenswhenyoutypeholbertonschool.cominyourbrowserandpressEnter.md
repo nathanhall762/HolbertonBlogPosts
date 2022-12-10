@@ -1,3 +1,5 @@
+![alt text for screen readers](/Untitled design (45).jpg "Blog Post Graphic")
+
 Have you ever wondered what happens behind the scenes when you type a URL into your web browser and press Enter? This blog post will describe, in detail, each step that occurs when a person uses their web browser to go to a website.
 
 From requesting the IP address of the website from the Domain Name System (DNS), to sending an HTTP GET request to the web server, to receiving data packets and building the webpage, there are many steps involved in the process of accessing a website. This blog post will provide a comprehensive overview of each of these steps, explaining how they work and how they fit together to allow you to access your favorite websites.
