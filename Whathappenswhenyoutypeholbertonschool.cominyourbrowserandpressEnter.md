@@ -1,4 +1,4 @@
-<img src="/Untitled design (45).jpg" alt="MarineGEO circle logo" style="height: 1260px; width:2240px;"/>
+<img src="/Untitled design (45).jpg" alt="Web Dev Blog Post Graphic"/>
 
 Have you ever wondered what happens behind the scenes when you type a URL into your web browser and press Enter? This blog post will describe, in detail, each step that occurs when a person uses their web browser to go to a website.
 
