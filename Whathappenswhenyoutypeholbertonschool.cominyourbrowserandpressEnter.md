@@ -20,7 +20,13 @@ If the DNS server does not have the requested IP address in its cache, it must f
 
 Once the DNS server has found the IP address, it sends it back to the web client in a DNS response. The web client can then use that IP address to access the website.
 
-Once a web client has obtained the IP address of the website it wants to access from the Domain Name System (DNS), the next step in the process is to send an HTTP GET request to the web server that hosts the website.
+Once the IP address is determined, the browser sends a TCP SYN (synchronize) packet to the server. This packet contains the IP address of the browser and the port number that the browser wants to use for the connection.
+
+The server receives the SYN packet and responds with a TCP SYN-ACK (synchronize-acknowledge) packet. This packet contains the IP address and port number of the server, as well as a unique number that is used to identify the specific connection.
+
+The browser receives the SYN-ACK packet and responds with a TCP ACK (acknowledge) packet. This packet contains the same unique number that was received in the SYN-ACK packet, and is used to confirm that the connection has been established.
+
+Once the connection has been established, the browser can send HTTP requests to the server and the server can respond with the requested web page.
 
 HTTP (Hypertext Transfer Protocol) is a communication protocol that is used to transfer data between a web server and a web client. The most common type of HTTP request is the GET request, which is used to request data from a server.
 
