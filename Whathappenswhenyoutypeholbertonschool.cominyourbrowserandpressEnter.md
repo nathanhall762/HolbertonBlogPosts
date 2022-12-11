@@ -44,6 +44,12 @@ Accept-Language: en-US,en;q=0.9
 ```
 The first line of the request (GET / HTTP/1.1) specifies the type of request (GET) and the URL of the website being accessed (/). The other lines of the request provide additional information about the web client and the type of data it is expecting to receive.
 
+When a web client (such as a web browser) makes an HTTP request to a web server, the server's firewall is responsible for controlling access to the server and its resources. The firewall uses a set of rules to determine whether to allow or deny the request based on the IP address, port, and other characteristics of the request.
+
+If the request is allowed by the firewall, it is forwarded to the web server. The server then processes the request and sends a response back to the client.
+
+If the request is denied by the firewall, the server will not receive the request and the client will receive an error message. The specific error message and behavior will depend on the configuration of the firewall and the web server.
+
 Once the web server receives the HTTP GET request, it processes it and generates a response. If the request is valid and the server has the requested information, it sends the response back to the web client. The response typically includes the data that the web client requested, as well as other information such as the type of data being sent and the status of the request.
 
 For example, if the web server responds to the HTTP GET request with the following data:
@@ -119,3 +125,18 @@ The web client downloads any images, videos, or other media that are included in
 Once the web client has processed all of the data packets and built the webpage, it displays the webpage to the user. The user can then interact with the webpage, clicking on links, filling out forms, or performing other actions.
 
 In conclusion, accessing a website involves many steps and technologies working together. From requesting the IP address of the website from the DNS, to sending an HTTP GET request to the web server, to receiving data packets and building the webpage, each step plays a crucial role in allowing you to access the information you need. Understanding how these steps work can help you to appreciate the complexity and power of the web, and can also help you to diagnose and troubleshoot problems that may arise when accessing websites.
+
+## Bonus! Secure communication between client and server with HTTPS
+When a web client (such as a web browser) communicates with a web server using HTTPS (Hypertext Transfer Protocol Secure), it uses the Secure Sockets Layer (SSL) protocol to establish a secure, encrypted connection. This ensures that the data exchanged between the client and server cannot be intercepted or tampered with by third parties.
+
+Here is a step-by-step breakdown of how a web client uses HTTPS/SSL to communicate with a web server:
+
+The client initiates an HTTPS connection by sending a request to the server. This request includes the desired URL and other HTTP headers, as well as a request for the server to establish an SSL connection.
+
+The server responds by sending its SSL certificate to the client. This certificate contains information about the server's identity, including the server's public key.
+
+The client verifies the server's certificate to ensure that it is authentic and has not been tampered with. If the certificate is valid, the client generates a symmetric key and sends it to the server encrypted with the server's public key.
+
+The server receives the encrypted key and uses its private key to decrypt it. Once the key is decrypted, both the client and server use it to encrypt and decrypt all further communication.
+
+The client and server can now communicate securely, with all data being encrypted and decrypted using the shared symmetric key.
